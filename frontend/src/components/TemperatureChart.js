@@ -27,11 +27,9 @@ const TemperatureChart = () => {
         });
     };
 
-    // Pobierz dane od razu po załadowaniu komponentu
     fetchTemperatureData();
 
-    // Aktualizuj dane co 10 sekund
-    const intervalId = setInterval(fetchTemperatureData, 10000);
+    const intervalId = setInterval(fetchTemperatureData, 5000);
 
     return () => clearInterval(intervalId); // Usuwanie interwału po zakończeniu działania komponentu
   }, []);
@@ -41,7 +39,7 @@ const TemperatureChart = () => {
     datasets: [
       {
         label: 'Temperatura',
-        data: temperatureData.map((item) => item.temperature), // Temperatura
+        data: temperatureData.map((item) => item.temperature), 
         fill: false,
         borderColor: 'rgba(75, 192, 192, 1)',
         tension: 0.1,
@@ -50,8 +48,8 @@ const TemperatureChart = () => {
   };
 
   return (
-    <div>
-      <h2>Wykres Temperatury</h2>
+    <div className="chart-container"> 
+      <h2>Temperature Chart</h2>
       <Line data={chartData} />
     </div>
   );

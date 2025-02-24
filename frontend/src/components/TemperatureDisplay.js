@@ -16,11 +16,11 @@ function TemperatureDisplay() {
         });
     };
 
-    fetchTemperature(); // Pobierz dane na początku
+    fetchTemperature();
 
-    const interval = setInterval(fetchTemperature, 5000); // Odświeżaj co 5 sekund
+    const interval = setInterval(fetchTemperature, 5000); 
 
-    return () => clearInterval(interval); // Posprzątaj po zakończeniu komponentu
+    return () => clearInterval(interval); 
   }, []);
 
   return (

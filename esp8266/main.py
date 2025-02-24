@@ -3,8 +3,8 @@ import time
 from mqtt import MQTTHandler
 from sensor import TemperatureSensor
 
-SSID = 'Orange_Swiatlowod_7200'
-PASSWORD = 'M7VDT3GHUEQY'
+SSID = '...'
+PASSWORD = '...'
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
@@ -25,5 +25,5 @@ sensor = TemperatureSensor()
 while True:
     temperature = sensor.read_temperature()
     mqtt_handler.publish_temperature(temperature)
-    time.sleep(2)
+    time.sleep(5)
 

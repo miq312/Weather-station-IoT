@@ -1,6 +1,7 @@
 import React from "react";
-import TemperatureDisplay from "./TemperatureDisplay";
-import TemperatureChart from "./TemperatureChart";
+import TemperatureDisplay from "./components//TemperatureDisplay";
+import TemperatureChart from "./components/TemperatureChart";
+import './App.css';
 
 function App() {
   return (
